@@ -1,0 +1,167 @@
+* {
+    font-size: 100%;
+    font-family: 'Poppins';
+    box-sizing:content-box;
+    margin: 0;
+    padding: 0;
+   }
+/* 
+input:required {
+    border-color: #ffcaca;
+    border-width: 1px;
+  }
+
+select:required {
+    border-color: #ffcaca;
+    border-width: 1px;
+} */
+
+
+::ng-deep .main-form{
+    background-color: white;
+}
+
+
+.container{
+    background-color: #f8f8f8;
+    height: 100vh;
+    width: 90%;
+    margin-inline: auto;
+}
+
+.card-container{
+    display: flex;
+    padding-inline: 4rem;
+    border-radius: 10px;
+    padding-top: 3rem;
+}
+
+.title{
+    font-weight:600;
+    padding-inline: 4rem;
+    color: #393939;
+    padding-top: 3rem;
+}
+
+.input-name{
+    color: #393939;
+}
+
+.lable{
+    color: #9d9d9d;
+    font-size: .5rem;
+    font-weight: 400;
+    padding-left: 1.5rem;
+}
+
+.input-field{
+    border: none;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 5px;
+    box-shadow: none;
+    padding: 5px;
+    color: #5c5c5c;
+    font-size: 8px;
+    width: 50ch;
+    
+}
+
+.input-field:focus{
+    outline: none;
+}
+
+.form-field-container{
+    margin-bottom: 1.5rem;
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg width="30px" height="800px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill="%235C5F62" d="M13.098 8H6.902c-.751 0-1.172.754-.708 1.268L9.292 12.7c.36.399 1.055.399 1.416 0l3.098-3.433C14.27 8.754 13.849 8 13.098 8Z"/></svg>');
+    background-repeat: no-repeat, repeat;
+    background-position: right .6em top 50%, 0 0;
+    background-size: 1rem auto, 100%;
+    
+}
+  
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+   
+}
+
+.button-container button{
+    margin-right: 1.5rem;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+
+}
+
+.button-container .reset{
+    width: 100px;
+    height: 30px;
+    background: none;
+    border: 1.2px solid sandybrown;
+    border-radius: 5px;
+    color: sandybrown;
+    font-size: .5rem;
+}
+
+.button-container .save{
+    width: 100px;
+    height: 30px;
+    background: sandybrown;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: .5rem;
+}
+.card{
+    margin-inline: 40px;
+}
+
+#display-table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 400px;
+}
+
+#display-table td, #display-table th {
+    border: 1px solid #ddd;
+    padding-inline:8px;
+    padding-block:5px ;
+    font-size: 8px;
+    height: 10px;
+    border-left: none;
+    border-right: none;
+}
+
+#display-table th {
+    height: 10px;
+    text-align: left;
+    background-color: #e8e8e8;
+    color: rgb(77, 77, 77);
+    
+}
+
+
+#display-table tr{
+    color: #555555;
+}
+
+
+fa-icon{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 10px;
+    color:  sandybrown;;
+}
+
+
+.actions{
+    background: transparent;
+    border: none;
+}

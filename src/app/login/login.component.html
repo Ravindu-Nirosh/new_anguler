@@ -1,0 +1,104 @@
+<img src="../../assets/unnamed.png" alt="logo" class="logoImage" />
+<div class="container">
+  <h5 class="title">Anguler - Crud Operation</h5>
+  <div class="card-container">
+    <mat-card calss="card-left">
+      <form class="main-form" name="myForm" [formGroup]="loginForm">
+        <div class="form-field-container">
+          <label for="Name" class="lable">Name</label>
+          <br />
+          <input
+            name="nameInput"
+            type="text"
+            formControlName="userName"
+            required
+            value="Jhon Smith"
+            class="input-field"
+          />
+          <span
+            class="errorMessage"
+            *ngIf="userName && userName.invalid && userName.touched"
+            >This field is required
+          </span>
+        </div>
+
+        <div class="form-field-container">
+          <label for="Name" class="lable">Designation</label>
+          <br />
+          <select
+            name="Postion"
+            id="cars"
+            class="input-field"
+            name="des"
+            formControlName="designation"
+            required
+          >
+            <option
+              value="Manager"
+              *ngFor="let item of designationList"
+              [value]="item"
+            >
+              {{ item }}
+            </option>
+          </select>
+          <span
+            class="errorMessage"
+            *ngIf="designation && designation.invalid && designation.touched"
+            >This field is required
+          </span>
+        </div>
+
+        <div class="form-field-container">
+          <label for="Name" class="lable">Salary</label>
+          <br />
+          <input
+            type="text"
+            name="salary"
+            formControlName="salary"
+            value="Jhon Smith"
+            class="input-field"
+            required
+          />
+          <span
+            class="errorMessage"
+            *ngIf="salary && salary.invalid && salary.touched"
+            >This field is required
+          </span>
+        </div>
+
+        <div class="button-container">
+          <Button class="reset" (click)="onReset()">Reset</Button>
+          <Button
+            class="save"
+            (click)="onRegister()"
+            [disabled]="loginForm.invalid"
+            >Save</Button
+          >
+        </div>
+      </form>
+    </mat-card>
+    <mat-card class="card">
+      <table id="display-table">
+        <tr>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Salary</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let item of registerUsers">
+          <td>{{ item.name }}</td>
+          <td>{{ item.desig }}</td>
+          <td>{{ item.salray }}</td>
+          <td class="icons">
+            <button (click)="onDelete(item.studentId)" class="actions">
+              <fa-icon [icon]="faTrash" class="trash"></fa-icon>
+            </button>
+            <button (click)="openDialog(item.studentId)" class="actions">
+              <fa-icon [icon]="faEdit"></fa-icon>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </mat-card>
+  </div>
+</div>

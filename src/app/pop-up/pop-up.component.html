@@ -1,0 +1,53 @@
+<div calss="card-left">
+  <form class="main-form">
+    <div class="form-field-container">
+      <label for="Name" class="lable">Name</label>
+      <br />
+      <input
+        name="name"
+        type="text"
+        required
+        value=""
+        class="input-field"
+        value="{{ registerUsers.name }}"
+        [(ngModel)]="name"
+      />
+    </div>
+
+    <div class="form-field-container">
+      <label for="Name" class="lable">Designation</label>
+      <br />
+      <select
+        name="Postion"
+        id="desig"
+        class="input-field"
+        name="des"
+        required
+        [(ngModel)]="des"
+      >
+        <option value="Manager">Manager</option>
+        <option value="IT Manager">IT Manager</option>
+        <option value="Devaloper">Devaloper</option>
+      </select>
+    </div>
+
+    <div class="form-field-container">
+      <label for="Name" class="lable">Salary</label>
+      <br />
+      <input
+        type="text"
+        name="salary"
+        value="{{ registerUsers.salray }}"
+        class="input-field"
+        [(ngModel)]="sal"
+        required
+      />
+    </div>
+
+    <div class="button-container">
+      <Button class="save" (click)="onUpdate(registerUsers.studentId)"
+        >Update</Button
+      >
+    </div>
+  </form>
+</div>
